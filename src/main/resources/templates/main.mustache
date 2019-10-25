@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/mainPage.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+<div>
+    <form method="post">
+        Введите текст:
+        <br>
+        <input type="text" name="text">
+        <br><br>
+        Оглавление:
+        <br>
+        <input type="text" name="title">
+        <br><br>
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+<div>
+    <table border=2 >
+        <tr>
+            <td><b>id</b></td>
+            <td><b>text</b></td>
+            <td><b>title</b></td>
+        </tr>
+        {{#letters}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{text}}</td>
+            <td>{{title}}</td>
+        </tr>
+        {{/letters}}
+    </table>
+</div>
+</body>
+</html>
